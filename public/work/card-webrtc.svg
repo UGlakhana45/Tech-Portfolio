@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+  <defs>
+    <linearGradient id="wbg" x1="0%" y1="50%" x2="100%" y2="50%">
+      <stop offset="0%" style="stop-color:#050807"/>
+      <stop offset="100%" style="stop-color:#0d1210"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="700" fill="url(#wbg)"/>
+  <g transform="translate(64,48)">
+    <rect width="1072" height="604" rx="22" fill="#0a0e0c" stroke="rgba(61,214,198,0.3)" stroke-width="1.5"/>
+    <text x="32" y="42" fill="#3dd6c6" font-family="ui-monospace,monospace" font-size="12" letter-spacing="0.28em">WEBRTC LAB</text>
+    <text x="800" y="42" fill="#e8a54b" font-family="ui-monospace,monospace" font-size="11">TURN · STUN · DATA CH</text>
+    <rect x="32" y="72" width="500" height="500" rx="16" fill="#061210" stroke="rgba(61,214,198,0.2)"/>
+    <rect x="556" y="72" width="484" height="240" rx="16" fill="#080c0a" stroke="rgba(232,165,75,0.18)"/>
+    <rect x="556" y="332" width="234" height="240" rx="16" fill="#080c0a" stroke="rgba(232,165,75,0.12)"/>
+    <rect x="806" y="332" width="234" height="240" rx="16" fill="#080c0a" stroke="rgba(232,165,75,0.12)"/>
+    <circle cx="282" cy="322" r="90" fill="#0e1614" stroke="#3dd6c6" stroke-width="2.5"/>
+    <text x="252" y="328" fill="#3dd6c6" font-family="ui-sans-serif,system-ui,sans-serif" font-size="14" font-weight="600">local</text>
+    <g stroke="#3dd6c6" stroke-width="2" fill="none" opacity="0.5">
+      <path d="M540 160 C 620 100, 720 220, 800 160"/>
+      <path d="M540 480 C 660 400, 740 520, 820 440"/>
+    </g>
+    <circle cx="100" cy="160" r="8" fill="#e8a54b"/>
+    <circle cx="100" cy="200" r="8" fill="#e8a54b" opacity="0.5"/>
+    <rect x="128" y="146" width="200" height="36" rx="6" fill="#141a18"/>
+    <text x="140" y="170" fill="#f4f0e8" font-family="ui-monospace,monospace" font-size="11">signal · connected</text>
+    <rect x="128" y="190" width="200" height="36" rx="6" fill="#141a18"/>
+    <text x="140" y="214" fill="#9c9588" font-family="ui-monospace,monospace" font-size="11">ice gathering · complete</text>
+    <text x="580" y="108" fill="#9c9588" font-family="ui-monospace,monospace" font-size="10" letter-spacing="0.15em">REMOTE TRACKS</text>
+    <rect x="580" y="128" width="436" height="160" rx="12" fill="#0c100e"/>
+    <rect x="600" y="148" width="180" height="120" rx="8" fill="#1a2220" stroke="#3dd6c6" stroke-width="1" opacity="0.7"/>
+    <rect x="796" y="148" width="180" height="120" rx="8" fill="#1a2220" stroke="#e8a54b" stroke-width="1" opacity="0.55"/>
+    <text x="580" y="376" fill="#9c9588" font-family="ui-monospace,monospace" font-size="10">BITRATE</text>
+    <rect x="580" y="392" width="190" height="140" rx="10" fill="#0c100e"/>
+    <path d="M600 500 L640 440 L680 460 L720 400 L760 420 L800 360" fill="none" stroke="#e8a54b" stroke-width="3" stroke-linecap="round"/>
+    <text x="830" y="376" fill="#9c9588" font-family="ui-monospace,monospace" font-size="10">PACKET LOSS</text>
+    <rect x="830" y="392" width="190" height="140" rx="10" fill="#0c100e"/>
+    <path d="M850 480 L890 500 L930 460 L970 490 L1010 430" fill="none" stroke="#3dd6c6" stroke-width="3" stroke-linecap="round"/>
+  </g>
+</svg>

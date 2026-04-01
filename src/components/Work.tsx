@@ -1,38 +1,49 @@
-import { useState, useCallback } from "react";
+import { useState, useCallback, type CSSProperties } from "react";
 import "./styles/Work.css";
 import WorkImage from "./WorkImage";
 import { MdArrowBack, MdArrowForward } from "react-icons/md";
 
-const projects = [
+const projects: {
+  title: string;
+  category: string;
+  tools: string;
+  image?: string;
+  link?: string;
+}[] = [
   {
-    title: "Solid Starters",
-    category: "Low-Code Platform",
-    tools: "Angular, Next.js, NestJS, MongoDB",
-    image: "/images/Solidx.png",
+    title: "Enterprise fintech platform",
+    category: "Mobile-first banking & payments — NDA",
+    tools:
+      "Full-stack rebuild · React Native and Nest · wallet integrations (e.g. Apple / Google Pay) · statements & account flows · adaptive layouts for phone and tablet",
+    image: "/work/card-fintech-app.svg",
   },
   {
-    title: "Radix",
-    category: "E-Commerce",
-    tools: "Angular, Next.js, NestJS, CMS",
-    image: "/images/radix.png",
+    title: "Visa & immigration platform",
+    category: "Canadian legal tech — NDA",
+    tools:
+      "WebRTC audio/video · WebSockets for live status · event-driven alerts · regulated documents & payments",
+    image: "/work/card-visa.svg",
   },
   {
-    title: "Bond Cancellation",
-    category: "Import-Export Automation",
-    tools: "Angular, Next.js, NestJS, Workflows",
-    image: "/images/bond.png",
+    title: "Web3 Digital verifications & signatures",
+    category: "Web3-facing proof & ledger (current focus)",
+    tools:
+      "React · PWA · AWS QLDB · Nest.js microservices on AWS · Expo / RN to store",
+    image: "/work/card-qldb.svg",
   },
   {
-    title: "Sapphire",
-    category: "CRM Platform",
-    tools: "AngularJS, NestJS, PostgreSQL",
-    image: "/images/sapphire.png",
+    title: "AI Fintech Dashboard",
+    category: "Public demo — GitHub",
+    tools: "TypeScript · composable dashboard architecture",
+    image: "/work/card-ai-dash.svg",
+    link: "https://github.com/UGlakhana45/AI-Fintech-Dashboard",
   },
   {
-    title: "Mpro",
-    category: "Insurance Platform",
-    tools: "React.js, Node.js, Microservices",
-    image: "/images/Maxlife.png",
+    title: "ai-fintech-webrtc",
+    category: "Realtime experiments — GitHub",
+    tools: "TypeScript · WebRTC-first patterns",
+    image: "/work/card-webrtc.svg",
+    link: "https://github.com/UGlakhana45/ai-fintech-webrtc",
   },
 ];
 
@@ -66,11 +77,22 @@ const Work = () => {
     <div className="work-section" id="work">
       <div className="work-container section-container">
         <h2>
-          My <span>Work</span>
+          Selected <span>work</span>
         </h2>
+        <p className="work-lede font-mono">
+          Enterprise repos stay private; spots below mix NDA clients with public
+          labs on{" "}
+          <a
+            href="https://github.com/UGlakhana45"
+            target="_blank"
+            rel="noreferrer"
+          >
+            GitHub
+          </a>
+          .
+        </p>
 
         <div className="carousel-wrapper">
-          {/* Navigation Arrows */}
           <button
             className="carousel-arrow carousel-arrow-left"
             onClick={goToPrev}
@@ -88,16 +110,18 @@ const Work = () => {
             <MdArrowForward />
           </button>
 
-          {/* Slides */}
           <div className="carousel-track-container">
             <div
               className="carousel-track"
-              style={{
-                transform: `translateX(-${currentIndex * 100}%)`,
-              }}
+              style={
+                {
+                  "--slide-count": projects.length,
+                  transform: `translateX(calc(-${currentIndex} * 100% / var(--slide-count)))`,
+                } as CSSProperties
+              }
             >
               {projects.map((project, index) => (
-                <div className="carousel-slide" key={index}>
+                <div className="carousel-slide" key={project.title}>
                   <div className="carousel-content">
                     <div className="carousel-info">
                       <div className="carousel-number">
@@ -109,13 +133,17 @@ const Work = () => {
                           {project.category}
                         </p>
                         <div className="carousel-tools">
-                          <span className="tools-label">Tools & Features</span>
+                          <span className="tools-label">Scope &amp; stack</span>
                           <p>{project.tools}</p>
                         </div>
                       </div>
                     </div>
                     <div className="carousel-image-wrapper">
-                      <WorkImage image={project.image} alt={project.title} />
+                      <WorkImage
+                        image={project.image}
+                        alt={project.title}
+                        link={project.link}
+                      />
                     </div>
                   </div>
                 </div>
@@ -123,13 +151,13 @@ const Work = () => {
             </div>
           </div>
 
-          {/* Dot Indicators */}
           <div className="carousel-dots">
             {projects.map((_, index) => (
               <button
                 key={index}
-                className={`carousel-dot ${index === currentIndex ? "carousel-dot-active" : ""
-                  }`}
+                className={`carousel-dot ${
+                  index === currentIndex ? "carousel-dot-active" : ""
+                }`}
                 onClick={() => goToSlide(index)}
                 aria-label={`Go to project ${index + 1}`}
                 data-cursor="disable"

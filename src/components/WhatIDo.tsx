@@ -28,9 +28,10 @@ const WhatIDo = () => {
     <div className="whatIDO">
       <div className="what-box">
         <h2 className="title">
-          W<span className="hat-h2">HAT</span>
+          How I
+          <span className="hat-h2"> work</span>
           <div>
-            I<span className="do-h2"> DO</span>
+            <span className="do-h2">now</span>
           </div>
         </h2>
       </div>
@@ -43,7 +44,7 @@ const WhatIDo = () => {
                 y1="0"
                 x2="0"
                 y2="100%"
-                stroke="white"
+                stroke="rgba(232, 165, 75, 0.35)"
                 strokeWidth="2"
                 strokeDasharray="7,7"
               />
@@ -52,7 +53,7 @@ const WhatIDo = () => {
                 y1="0"
                 x2="100%"
                 y2="100%"
-                stroke="white"
+                stroke="rgba(232, 165, 75, 0.35)"
                 strokeWidth="2"
                 strokeDasharray="7,7"
               />
@@ -69,7 +70,7 @@ const WhatIDo = () => {
                   y1="0"
                   x2="100%"
                   y2="0"
-                  stroke="white"
+                  stroke="rgba(232, 165, 75, 0.35)"
                   strokeWidth="2"
                   strokeDasharray="6,6"
                 />
@@ -78,7 +79,7 @@ const WhatIDo = () => {
                   y1="100%"
                   x2="100%"
                   y2="100%"
-                  stroke="white"
+                  stroke="rgba(232, 165, 75, 0.35)"
                   strokeWidth="2"
                   strokeDasharray="6,6"
                 />
@@ -87,22 +88,23 @@ const WhatIDo = () => {
             <div className="what-corner"></div>
 
             <div className="what-content-in">
-              <h3>FRONTEND</h3>
-              <h4>Building Interactive UIs</h4>
+              <h3>Surfaces</h3>
+              <h4>Web &amp; mobile products</h4>
               <p>
-                Crafting performant, responsive interfaces with modern frameworks.
-                From SPAs to micro-frontends, I deliver pixel-perfect experiences.
+                Screens compose—they don&apos;t compute. React Native (New
+                Architecture, Reanimated, MMKV) and Next.js clients stay lean;
+                hooks and services own orchestration so telemetry and financial
+                UIs stay at full frame rate.
               </p>
-              <h5>Skillset & tools</h5>
+              <h5>Stack signals</h5>
               <div className="what-content-flex">
-                <div className="what-tags">React.js</div>
-                <div className="what-tags">Angular</div>
+                <div className="what-tags">React</div>
+                <div className="what-tags">React Native</div>
                 <div className="what-tags">Next.js</div>
                 <div className="what-tags">TypeScript</div>
-                <div className="what-tags">JavaScript</div>
-                <div className="what-tags">Material UI</div>
-                <div className="what-tags">HTML5</div>
-                <div className="what-tags">CSS3</div>
+                <div className="what-tags">Tailwind</div>
+                <div className="what-tags">TanStack Query</div>
+                <div className="what-tags">PWA</div>
               </div>
               <div className="what-arrow"></div>
             </div>
@@ -118,7 +120,7 @@ const WhatIDo = () => {
                   y1="100%"
                   x2="100%"
                   y2="100%"
-                  stroke="white"
+                  stroke="rgba(232, 165, 75, 0.35)"
                   strokeWidth="2"
                   strokeDasharray="6,6"
                 />
@@ -126,22 +128,24 @@ const WhatIDo = () => {
             </div>
             <div className="what-corner"></div>
             <div className="what-content-in">
-              <h3>BACKEND</h3>
-              <h4>Scalable Server Architecture</h4>
+              <h3>Systems</h3>
+              <h4>Backends, data &amp; delivery</h4>
               <p>
-                Designing robust APIs and microservices. From CMS platforms to
-                complex business logic, I build backends that scale.
+                Nest.js and Node services with explicit module boundaries, SQL
+                and ledger stores (MSSQL, QLDB, Firebase), WebSockets / WebRTC
+                when the product is real-time, Dockerized deploys and GitHub
+                Actions for predictable releases.
               </p>
-              <h5>Skillset & tools</h5>
+              <h5>Stack signals</h5>
               <div className="what-content-flex">
+                <div className="what-tags">Nest.js</div>
                 <div className="what-tags">Node.js</div>
-                <div className="what-tags">NestJS</div>
-                <div className="what-tags">Express.js</div>
-                <div className="what-tags">MongoDB</div>
-                <div className="what-tags">PostgreSQL</div>
-                <div className="what-tags">REST APIs</div>
-                <div className="what-tags">Microservices</div>
-                <div className="what-tags">Python</div>
+                <div className="what-tags">GraphQL</div>
+                <div className="what-tags">REST</div>
+                <div className="what-tags">AWS QLDB</div>
+                <div className="what-tags">MSSQL</div>
+                <div className="what-tags">Docker</div>
+                <div className="what-tags">GitHub Actions</div>
               </div>
               <div className="what-arrow"></div>
             </div>

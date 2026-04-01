@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+  <defs>
+    <linearGradient id="abg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0b0908"/>
+      <stop offset="100%" style="stop-color:#151210"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="700" fill="url(#abg)"/>
+  <g transform="translate(56,44)">
+    <rect width="1088" height="612" rx="20" fill="#0e0c0a" stroke="rgba(232,165,75,0.28)" stroke-width="1.5"/>
+    <rect x="0" y="0" width="260" height="612" rx="20" fill="#0a0806"/>
+    <text x="28" y="48" fill="#3dd6c6" font-family="ui-monospace,monospace" font-size="11" letter-spacing="0.2em">AI DASH</text>
+    <rect x="20" y="72" width="220" height="36" rx="8" fill="#14110f"/>
+    <text x="36" y="94" fill="#f4f0e8" font-family="ui-sans-serif,system-ui,sans-serif" font-size="12">Overview</text>
+    <rect x="20" y="120" width="220" height="36" rx="8" fill="rgba(232,165,75,0.12)"/>
+    <text x="36" y="142" fill="#e8a54b" font-family="ui-sans-serif,system-ui,sans-serif" font-size="12" font-weight="600">Risk grid</text>
+    <rect x="20" y="168" width="220" height="36" rx="8" fill="#14110f"/>
+    <text x="36" y="190" fill="#9c9588" font-family="ui-sans-serif,system-ui,sans-serif" font-size="12">Signals</text>
+    <rect x="280" y="24" width="784" height="56" rx="12" fill="#12100e"/>
+    <text x="304" y="58" fill="#f4f0e8" font-family="ui-sans-serif,system-ui,sans-serif" font-size="16" font-weight="600">Portfolio exposure</text>
+    <text x="948" y="58" fill="#3dd6c6" font-family="ui-monospace,monospace" font-size="11">TS LIVE</text>
+    <g transform="translate(280,100)">
+      <rect width="244" height="140" rx="12" fill="#0a0806" stroke="rgba(244,240,232,0.06)"/>
+      <text x="20" y="32" fill="#9c9588" font-family="ui-monospace,monospace" font-size="10">DELTA</text>
+      <text x="20" y="72" fill="#e8a54b" font-family="ui-sans-serif,system-ui,sans-serif" font-size="28" font-weight="700">+4.2%</text>
+      <rect x="20" y="100" width="160" height="8" rx="2" fill="#3a322a"/>
+      <rect x="268" y="0" width="244" height="140" rx="12" fill="#0a0806" stroke="rgba(244,240,232,0.06)"/>
+      <text x="288" y="32" fill="#9c9588" font-family="ui-monospace,monospace" font-size="10">FLOW</text>
+      <path d="M300 100 L340 72 L388 88 L430 48 L470 68 L508 40" fill="none" stroke="#3dd6c6" stroke-width="3" stroke-linecap="round"/>
+      <rect x="536" y="0" width="244" height="140" rx="12" fill="#0a0806" stroke="rgba(244,240,232,0.06)"/>
+      <text x="556" y="32" fill="#9c9588" font-family="ui-monospace,monospace" font-size="10">ALERTS</text>
+      <rect x="556" y="52" width="200" height="10" rx="2" fill="#c45c26" opacity="0.65"/>
+      <rect x="556" y="72" width="160" height="10" rx="2" fill="#3a322a"/>
+    </g>
+    <g transform="translate(280,264)">
+      <rect width="784" height="320" rx="14" fill="#080706" stroke="rgba(61,214,198,0.18)"/>
+      <rect x="24" y="24" width="736" height="40" rx="8" fill="#12100e"/>
+      <text x="40" y="50" fill="#9c9588" font-family="ui-monospace,monospace" font-size="11">TANSTACK DATA GRID</text>
+      <g transform="translate(24,84)">
+        <rect y="0" width="736" height="36" fill="#14110f"/>
+        <text x="16" y="23" fill="#e8a54b" font-family="ui-monospace,monospace" font-size="11">TICKER</text>
+        <text x="200" y="23" fill="#e8a54b" font-family="ui-monospace,monospace" font-size="11">NOTIONAL</text>
+        <text x="400" y="23" fill="#e8a54b" font-family="ui-monospace,monospace" font-size="11">VOL</text>
+        <rect y="40" width="736" height="36" fill="#0e0c0a"/>
+        <text x="16" y="62" fill="#f4f0e8" font-family="ui-monospace,monospace" font-size="12">FNX</text>
+        <text x="200" y="62" fill="#f4f0e8" font-family="ui-monospace,monospace" font-size="12">$182,400</text>
+        <text x="400" y="62" fill="#3dd6c6" font-family="ui-monospace,monospace" font-size="12">12.4%</text>
+        <rect y="80" width="736" height="36" fill="#14110f"/>
+        <text x="16" y="102" fill="#f4f0e8" font-family="ui-monospace,monospace" font-size="12">KDME</text>
+        <text x="200" y="102" fill="#f4f0e8" font-family="ui-monospace,monospace" font-size="12">$94,020</text>
+        <text x="400" y="102" fill="#e8a54b" font-family="ui-monospace,monospace" font-size="12">8.1%</text>
+        <rect y="120" width="736" height="36" fill="#0e0c0a"/>
+        <text x="16" y="142" fill="#f4f0e8" font-family="ui-monospace,monospace" font-size="12">ALPH</text>
+        <text x="200" y="142" fill="#f4f0e8" font-family="ui-monospace,monospace" font-size="12">$40,882</text>
+        <text x="400" y="142" fill="#f4f0e8" font-family="ui-monospace,monospace" font-size="12">2.3%</text>
+      </g>
+    </g>
+  </g>
+</svg>

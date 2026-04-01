@@ -10,28 +10,32 @@ const Loading = ({ percent }: { percent: number }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [clicked, setClicked] = useState(false);
 
-  if (percent >= 100) {
-    setTimeout(() => {
-      setLoaded(true);
-      setTimeout(() => {
-        setIsLoaded(true);
-      }, 1000);
-    }, 600);
-  }
+  useEffect(() => {
+    if (percent < 100) return;
+    const enterReady = window.setTimeout(() => setLoaded(true), 140);
+    const fxReady = window.setTimeout(() => setIsLoaded(true), 380);
+    return () => {
+      window.clearTimeout(enterReady);
+      window.clearTimeout(fxReady);
+    };
+  }, [percent]);
 
   useEffect(() => {
+    if (!isLoaded) return;
+    let cancelled = false;
     import("./utils/initialFX").then((module) => {
-      if (isLoaded) {
-        setClicked(true);
-        setTimeout(() => {
-          if (module.initialFX) {
-            module.initialFX();
-          }
-          setIsLoading(false);
-        }, 900);
-      }
+      if (cancelled) return;
+      setClicked(true);
+      window.setTimeout(() => {
+        if (cancelled) return;
+        module.initialFX?.();
+        setIsLoading(false);
+      }, 320);
     });
-  }, [isLoaded]);
+    return () => {
+      cancelled = true;
+    };
+  }, [isLoaded, setIsLoading]);
 
   function handleMouseMove(e: React.MouseEvent<HTMLElement>) {
     const { currentTarget: target } = e;
@@ -46,7 +50,7 @@ const Loading = ({ percent }: { percent: number }) => {
     <>
       <div className="loading-header">
         <a href="/#" className="loader-title" data-cursor="disable">
-          RC
+          UG<span style={{ color: "var(--accent)" }}>45</span>
         </a>
         <div className={`loaderGame ${clicked && "loader-out"}`}>
           <div className="loaderGame-container">
@@ -61,9 +65,14 @@ const Loading = ({ percent }: { percent: number }) => {
       </div>
       <div className="loading-screen">
         <div className="loading-marquee">
-          <Marquee>
-            <span> Full Stack Developer</span> <span>Software Engineer</span>
-            <span> Full Stack Developer</span> <span>Software Engineer</span>
+          <Marquee speed={48}>
+            <span>Fintech</span>
+            <span>Web3</span>
+            <span>React Native</span>
+            <span>Nest.js</span>
+            <span>Blast radius zero</span>
+            <span>TypeScript</span>
+            <span>Real-time</span>
           </Marquee>
         </div>
         <div
@@ -81,7 +90,7 @@ const Loading = ({ percent }: { percent: number }) => {
               <div className="loading-box"></div>
             </div>
             <div className="loading-content2">
-              <span>Welcome</span>
+              <span>Enter</span>
             </div>
           </div>
         </div>
@@ -97,36 +106,36 @@ export const setProgress = (setLoading: (value: number) => void) => {
 
   let interval = setInterval(() => {
     if (percent <= 50) {
-      let rand = Math.round(Math.random() * 5);
-      percent = percent + rand;
+      const rand = Math.round(Math.random() * 6) + 2;
+      percent = Math.min(50, percent + rand);
       setLoading(percent);
     } else {
-      clearInterval(interval);
-      interval = setInterval(() => {
-        percent = percent + Math.round(Math.random());
+      window.clearInterval(interval);
+      interval = window.setInterval(() => {
+        percent = Math.min(92, percent + Math.round(Math.random() * 4) + 1);
         setLoading(percent);
-        if (percent > 91) {
-          clearInterval(interval);
+        if (percent >= 92) {
+          window.clearInterval(interval);
         }
-      }, 2000);
+      }, 380);
     }
-  }, 100);
+  }, 85);
 
   function clear() {
-    clearInterval(interval);
+    window.clearInterval(interval);
     setLoading(100);
   }
 
   function loaded() {
     return new Promise<number>((resolve) => {
-      clearInterval(interval);
-      interval = setInterval(() => {
+      window.clearInterval(interval);
+      interval = window.setInterval(() => {
         if (percent < 100) {
           percent++;
           setLoading(percent);
         } else {
           resolve(percent);
-          clearInterval(interval);
+          window.clearInterval(interval);
         }
       }, 2);
     });

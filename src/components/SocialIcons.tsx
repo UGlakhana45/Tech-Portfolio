@@ -1,13 +1,13 @@
 import {
   FaGithub,
-  FaInstagram,
   FaLinkedinIn,
-  FaXTwitter,
+  FaRegFileLines,
 } from "react-icons/fa6";
 import "./styles/SocialIcons.css";
 import { TbNotes } from "react-icons/tb";
 import { useEffect } from "react";
 import HoverLinks from "./HoverLinks";
+import { RESUME_URL, TECHNICAL_MANIFESTO_URL } from "../config/site";
 
 const SocialIcons = () => {
   useEffect(() => {
@@ -51,7 +51,7 @@ const SocialIcons = () => {
       updatePosition();
 
       return () => {
-        elem.removeEventListener("mousemove", onMouseMove);
+        document.removeEventListener("mousemove", onMouseMove);
       };
     });
   }, []);
@@ -60,28 +60,41 @@ const SocialIcons = () => {
     <div className="icons-section">
       <div className="social-icons" data-cursor="icons" id="social">
         <span>
-          <a href="https://github.com/rajeshchityal" target="_blank">
+          <a
+            href="https://github.com/UGlakhana45"
+            target="_blank"
+            rel="noreferrer"
+          >
             <FaGithub />
           </a>
         </span>
         <span>
-          <a href="https://www.linkedin.com/in/rajeshchityal" target="_blank">
+          <a
+            href="https://www.linkedin.com/in/uday-lakhana"
+            target="_blank"
+            rel="noreferrer"
+          >
             <FaLinkedinIn />
           </a>
         </span>
         <span>
-          <a href="https://x.com/rajeshchityal" target="_blank">
-            <FaXTwitter />
-          </a>
-        </span>
-        <span>
-          <a href="https://www.instagram.com/rajeshchityal" target="_blank">
-            <FaInstagram />
+          <a
+            href={RESUME_URL}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Resume (PDF on Google Drive)"
+          >
+            <FaRegFileLines />
           </a>
         </span>
       </div>
-      <a className="resume-button" href="#">
-        <HoverLinks text="RESUME" />
+      <a
+        className="resume-button"
+        href={TECHNICAL_MANIFESTO_URL}
+        target="_blank"
+        rel="noreferrer"
+      >
+        <HoverLinks text="MANIFESTO" />
         <span>
           <TbNotes />
         </span>

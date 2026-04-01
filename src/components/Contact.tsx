@@ -1,5 +1,6 @@
 import { MdArrowOutward, MdCopyright } from "react-icons/md";
 import "./styles/Contact.css";
+import { TECHNICAL_MANIFESTO_URL } from "../config/site";
 
 const Contact = () => {
   return (
@@ -10,54 +11,55 @@ const Contact = () => {
           <div className="contact-box">
             <h4>Email</h4>
             <p>
-              <a href="mailto:rajeshchittyal21@gmail.com" data-cursor="disable">
-                rajeshchittyal21@gmail.com
+              <a href="mailto:lakhanauday9@gmail.com" data-cursor="disable">
+                lakhanauday9@gmail.com
               </a>
             </p>
+            <h4>Phone</h4>
+            <p className="font-mono">+91 82005 04513</p>
             <h4>Education</h4>
-            <p>BSc in Computer Science</p>
+            <p>
+              B.E. Information Technology — Marwadi University (2017–2021),
+              CGPA 7.7/10
+            </p>
           </div>
           <div className="contact-box">
             <h4>Social</h4>
             <a
-              href="https://github.com/raxx21"
+              href="https://github.com/UGlakhana45"
               target="_blank"
+              rel="noreferrer"
               data-cursor="disable"
               className="contact-social"
             >
-              Github <MdArrowOutward />
+              GitHub <MdArrowOutward />
             </a>
             <a
-              href="https://www.linkedin.com/in/rajesh-chityal-2a70141b3"
+              href="https://www.linkedin.com/in/uday-lakhana"
               target="_blank"
+              rel="noreferrer"
               data-cursor="disable"
               className="contact-social"
             >
-              Linkedin <MdArrowOutward />
+              LinkedIn <MdArrowOutward />
             </a>
             <a
-              href="https://x.com/raxx21_official"
+              href={TECHNICAL_MANIFESTO_URL}
               target="_blank"
+              rel="noreferrer"
               data-cursor="disable"
               className="contact-social"
             >
-              Twitter <MdArrowOutward />
-            </a>
-            <a
-              href="https://www.instagram.com/therajeshchityal"
-              target="_blank"
-              data-cursor="disable"
-              className="contact-social"
-            >
-              Instagram <MdArrowOutward />
+              Technical manifesto <MdArrowOutward />
             </a>
           </div>
           <div className="contact-box">
             <h2>
-              Designed and Developed <br /> by <span>Rajesh Chityal</span>
+              Designed &amp; engineered <br /> by{" "}
+              <span>Uday Lakhana</span>
             </h2>
             <h5>
-              <MdCopyright /> 2025
+              <MdCopyright /> 2026 · Ahmedabad
             </h5>
           </div>
         </div>

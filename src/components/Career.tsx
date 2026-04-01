@@ -5,8 +5,8 @@ const Career = () => {
     <div className="career-section section-container">
       <div className="career-container">
         <h2>
-          My career <span>&</span>
-          <br /> experience
+          Experience <span>&</span>
+          <br /> trajectory
         </h2>
         <div className="career-info">
           <div className="career-timeline">
@@ -15,43 +15,36 @@ const Career = () => {
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>Full Stack Developer</h4>
-                <h5>Ikshan</h5>
+                <h4> Software Engineer</h4>
+                <h5>eSparkBiz · Ahmedabad</h5>
               </div>
-              <h3>2020</h3>
+              <h3 className="font-mono">2026 - Present</h3>
             </div>
             <p>
-              Built 6+ complete applications using React.js. Integrated backend
-              authentication using Node.js & MongoDB. Created responsive UI/UX
-              and designed wireframes using Figma.
-            </p>
-          </div>
-          <div className="career-info-box">
-            <div className="career-info-in">
-              <div className="career-role">
-                <h4>Senior Full Stack Developer</h4>
-                <h5>Monocept (Max Life Insurance)</h5>
-              </div>
-              <h3>2021</h3>
-            </div>
-            <p>
-              Led two development teams on Mpro, a large-scale insurance
-              operations platform. Developed multiple modules using React.js &
-              migrated critical functionalities to Node.js microservices.
+              Web3 verification with a responsive React / PWA front end and AWS
+              QLDB for immutable audit trails. Nest.js microservices on AWS with
+              CI/CD focused on scalability and reliable transactions. Shipped
+              production Android and iOS builds with Expo and React Native CLI.
+              Heavy use of Cursor / Copilot for speed on the safe, isolated
+              parts of the stack.
             </p>
           </div>
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
                 <h4>Full Stack Developer</h4>
-                <h5>Logic Loop</h5>
+                <h5>IT Path Solutions · Ahmedabad</h5>
               </div>
-              <h3>NOW</h3>
+              <h3 className="font-mono">2022 - 2025</h3>
             </div>
             <p>
-              Building Solid, a proprietary low-code platform using Angular,
-              Next.js & NestJS. Delivering production-ready CMS-based projects
-              including e-commerce, CRM, and import-export automation systems.
+              End-to-end work on a financial platform integrating Twilio, Pismo,
+              and Basiq for payments and card lifecycle. Improved React
+              rendering through memoization and structural cleanup (~25%).
+              Node, Express, and MSSQL backends with faster sync and ~40% less
+              downtime after REST migrations. Jenkins CI/CD that cut deploy time
+              ~30%; Angular admin surfaces for reporting when the product needed
+              it.
             </p>
           </div>
         </div>

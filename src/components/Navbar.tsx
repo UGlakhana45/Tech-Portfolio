@@ -23,14 +23,14 @@ const Navbar = () => {
     smoother.scrollTop(0);
     smoother.paused(true);
 
-    let links = document.querySelectorAll(".header ul a");
-    links.forEach((elem) => {
-      let element = elem as HTMLAnchorElement;
+    const links = document.querySelectorAll(".header ul a");
+    links.forEach((anchor) => {
+      const element = anchor as HTMLAnchorElement;
       element.addEventListener("click", (e) => {
         if (window.innerWidth > 1024) {
           e.preventDefault();
-          let elem = e.currentTarget as HTMLAnchorElement;
-          let section = elem.getAttribute("data-href");
+          const target = e.currentTarget as HTMLAnchorElement;
+          const section = target.getAttribute("data-href");
           smoother.scrollTo(section, true, "top top");
         }
       });
@@ -42,15 +42,15 @@ const Navbar = () => {
   return (
     <>
       <div className="header">
-        <a href="/#" className="navbar-title" data-cursor="disable">
-          RC
+        <a href="/#" className="navbar-title font-mono" data-cursor="disable">
+          UG<span className="navbar-title-accent">45</span>
         </a>
         <a
-          href="mailto:rajeshchittyal21@gmail.com"
-          className="navbar-connect"
+          href="mailto:lakhanauday9@gmail.com"
+          className="navbar-connect font-mono"
           data-cursor="disable"
         >
-          rajeshchittyal21@gmail.com
+          lakhanauday9@gmail.com
         </a>
         <ul>
           <li>

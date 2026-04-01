@@ -1,0 +1,133 @@
+.techstack {
+  width: 100%;
+  position: relative;
+  overflow: visible;
+  min-height: 0;
+  margin: 0 auto;
+  padding: 3.5rem 0 5rem;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(26, 18, 12, 0.35) 40%,
+    transparent 100%
+  );
+}
+
+.techstack-inner {
+  margin: 0 auto;
+  width: var(--cWidth);
+  max-width: var(--cMaxWidth);
+}
+
+.techstack h2 {
+  font-size: clamp(2rem, 5vw, 3.75rem);
+  text-align: left;
+  position: relative;
+  top: 0;
+  width: 100%;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  margin: 0 0 2.5rem;
+}
+
+.techstack h2 .techstack-sub {
+  display: block;
+  font-size: 0.28em;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-top: 1rem;
+  max-width: 32rem;
+  line-height: 1.5;
+}
+
+.techstack-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem 2rem;
+}
+
+.techstack-group {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.techstack--visible .techstack-group:nth-child(1) {
+  transition-delay: 0.05s;
+}
+.techstack--visible .techstack-group:nth-child(2) {
+  transition-delay: 0.12s;
+}
+.techstack--visible .techstack-group:nth-child(3) {
+  transition-delay: 0.19s;
+}
+
+.techstack--visible .techstack-group {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.techstack-group-title {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--accent-cool);
+  margin: 0 0 1rem;
+  opacity: 0.92;
+}
+
+.techstack-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.techstack-pill {
+  margin: 0;
+}
+
+.techstack-pill span {
+  display: inline-block;
+  padding: 0.35rem 0.75rem;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+  background: rgba(232, 165, 75, 0.09);
+  border: 1px solid rgba(232, 165, 75, 0.28);
+  border-radius: 6px;
+  letter-spacing: 0.01em;
+}
+
+.techstack-foot {
+  margin: 2.5rem 0 0;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  max-width: 36rem;
+  line-height: 1.6;
+}
+
+@media only screen and (max-width: 1024px) {
+  .techstack-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .techstack {
+    padding: 2.5rem 0 3.5rem;
+  }
+
+  .techstack h2 {
+    font-size: 2rem;
+  }
+}

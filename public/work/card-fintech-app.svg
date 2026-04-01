@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+  <defs>
+    <linearGradient id="fbg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0c0a08"/>
+      <stop offset="100%" style="stop-color:#1f1410"/>
+    </linearGradient>
+    <linearGradient id="fglow" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" style="stop-color:#e8a54b;stop-opacity:0.35"/>
+      <stop offset="100%" style="stop-color:#0c0a08;stop-opacity:0"/>
+    </linearGradient>
+    <filter id="fshadow">
+      <feDropShadow dx="0" dy="12" stdDeviation="24" flood-color="#000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="700" fill="url(#fbg)"/>
+  <rect width="1200" height="380" fill="url(#fglow)"/>
+  <g transform="translate(72,56)" filter="url(#fshadow)">
+    <rect width="1056" height="588" rx="20" fill="#12100e" stroke="rgba(232,165,75,0.22)" stroke-width="1.5"/>
+    <rect x="0" y="0" width="1056" height="58" rx="20" fill="#1a1612"/>
+    <text x="28" y="38" fill="#e8a54b" font-family="ui-sans-serif,system-ui,sans-serif" font-size="13" font-weight="700" letter-spacing="0.12em">FINTECH APP - PRODUCTION</text>
+    <text x="868" y="36" fill="#3dd6c6" font-family="ui-monospace,monospace" font-size="12" letter-spacing="0.08em">LIVE</text>
+    <rect x="28" y="86" width="312" height="210" rx="12" fill="#0e0c0a" stroke="rgba(244,240,232,0.08)"/>
+    <text x="44" y="116" fill="#9c9588" font-family="ui-monospace,monospace" font-size="11" letter-spacing="0.15em">BALANCE</text>
+    <text x="44" y="168" fill="#f4f0e8" font-family="ui-sans-serif,system-ui,sans-serif" font-size="36" font-weight="700">$24,891.02</text>
+    <rect x="44" y="230" width="120" height="10" rx="3" fill="#e8a54b" opacity="0.85"/>
+    <rect x="44" y="252" width="180" height="10" rx="3" fill="#3a322a"/>
+    <rect x="44" y="274" width="140" height="10" rx="3" fill="#3a322a"/>
+    <rect x="364" y="86" width="664" height="468" rx="12" fill="#0a0806" stroke="rgba(61,214,198,0.15)"/>
+    <path d="M400 420 L480 340 L580 380 L700 260 L820 300 L980 200" fill="none" stroke="#3dd6c6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
+    <path d="M400 350 L520 400 L640 320 L780 360 L940 280" fill="none" stroke="#e8a54b" stroke-width="3" stroke-linecap="round" opacity="0.75"/>
+    <g transform="translate(388,110)">
+      <rect width="140" height="46" rx="8" fill="#1a1612"/>
+      <text x="16" y="22" fill="#9c9588" font-family="ui-monospace,monospace" font-size="10">APPLE PAY</text>
+      <text x="16" y="38" fill="#f4f0e8" font-family="ui-sans-serif,system-ui,sans-serif" font-size="13" font-weight="600">Linked</text>
+      <rect x="160" y="0" width="140" height="46" rx="8" fill="#1a1612"/>
+      <text x="176" y="22" fill="#9c9588" font-family="ui-monospace,monospace" font-size="10">G PAY</text>
+      <text x="176" y="38" fill="#f4f0e8" font-family="ui-sans-serif,system-ui,sans-serif" font-size="13" font-weight="600">Active</text>
+    </g>
+    <rect x="388" y="500" width="580" height="44" rx="10" fill="#e8a54b" opacity="0.12" stroke="rgba(232,165,75,0.45)"/>
+    <text x="408" y="528" fill="#e8a54b" font-family="ui-sans-serif,system-ui,sans-serif" font-size="14" font-weight="600">settle overdraft - secure handoff</text>
+  </g>
+</svg>

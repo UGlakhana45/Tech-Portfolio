@@ -30,6 +30,11 @@
   letter-spacing: 1px;
 }
 
+.about-me p strong {
+  color: var(--accent-cool);
+  font-weight: 700;
+}
+
 @media only screen and (min-width: 600px) {
   .about-section {
     justify-content: center;
